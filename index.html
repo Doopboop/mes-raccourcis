@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Raccourcis Web</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+            color: white;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 2.2rem;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #aaa;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 40px;
+        }
+
+        .search-box form {
+            display: flex;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px 0 0 25px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-box button,
+        .suggestion-link {
+            padding: 12px 25px;
+            border: none;
+            background: #4e54c8;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-box button {
+            border-radius: 0 25px 25px 0;
+        }
+
+        .search-box button:hover,
+        .suggestion-link:hover {
+            background: #6c72e0;
+        }
+
+        .category-title {
+            width: 99%;
+            max-width: 800px;
+            margin: 20px 0 15px;
+            font-size: 1.2rem;
+            color: #8f94fb;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            width: 98%;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 26px 14px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.2s, background 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .emoji {
+            font-size: 3rem;
+            margin-bottom: 11px;
+        }
+
+        .suggestions {
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto 20px;
+            padding-top: 20px;
+            text-align: center;
+            border-top: 1px solid #444;
+        }
+
+        .suggestions h2 {
+            color: #8f94fb;
+            margin-bottom: 10px;
+        }
+
+        .suggestions p {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .suggestion-link {
+            display: inline-block;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 Mon Espace Rapide</h1>
+    <p class="subtitle">Clique sur une carte pour ouvrir le site dans un nouvel onglet</p>
+
+    <div class="search-box">
+        <form action="https://www.google.com/search" method="GET" target="_blank" rel="noopener noreferrer">
+            <input type="text" name="q" placeholder="Rechercher sur Google..." aria-label="Rechercher sur Google" required>
+            <button type="submit">Go</button>
+        </form>
+    </div>
+
+    <h2 class="category-title">🎬 Vidéo &amp; Musique</h2>
+    <div class="grid">
+        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="card"><span class="emoji">▶️</span>YouTube</a>
+        <a href="https://www.twitch.tv" target="_blank" rel="noopener noreferrer" class="card"><span class="emoji">🎮</span>Twitch</a>
+        <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" class="card"><span class="emoji">🎵</span>Spotify</a>
+        <a href="https://www.netflix.com" target="_blank" rel="noopener noreferrer" class="card"><span class="emoji">🍿</span>Netflix</a>
+    </div>
+
+    <h2 class="category-title">💬 Réseaux &amp; Discussion</h2>
+    <div class="grid">
+        <a href="https://discord.com/app" target="_blank" rel="noopener noreferrer" class="card"><span class="emoji">🎧</span>Discord</a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="card"><span class="emoji">📸</span>Instagram</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="card"><span class="emoji">🐦</span>Twitter / X</a>
+        <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="card"><span class="emoji">📱</span>TikTok</a>
+        <a href="https://www.reddit.com" target="_blank" rel="noopener noreferrer" class="card"><span class="emoji">👽</span>Reddit</a>
+    </div>
+
+    <h2 class="category-title">📚 Outils &amp; Savoir</h2>
+    <div class="grid">
+        <a href="https://www.amazon.fr" target="_blank" rel="noopener noreferrer" class="card"><span class="emoji">📦</span>Amazon</a>
+        <a href="https://fr.wikipedia.org" target="_blank" rel="noopener noreferrer" class="card"><span class="emoji">📖</span>Wikipédia</a>
+        <a href="https://translate.google.fr" target="_blank" rel="noopener noreferrer" class="card"><span class="emoji">🌍</span>Traduction</a>
+        <a href="https://mail.google.com" target="_blank" rel="noopener noreferrer" class="card"><span class="emoji">✉️</span>Gmail</a>
+    </div>
+
+    <p>En 1 clic, économisez du temps.</p>
+
+    <section class="suggestions">
+        <h2>💡 Une idée de site à ajouter ?</h2>
+        <p>Aide-moi à améliorer cette page en proposant un nouveau raccourci !</p>
+        <a href="https://github.com/Doopboop/mes-raccourcis/issues/new?title=Suggestion+de+site&amp;body=Nom+du+site+%3A%0AURL+%3A%0A" target="_blank" rel="noopener noreferrer" class="suggestion-link">
+            ➕ Propose-moi un site :)
+        </a>
+    </section>
+</body>
+</html>
